@@ -1,0 +1,114 @@
+:root {
+  --indigo: #241a5c;
+  --indigo-oscuro: #14102e;
+  --rosa: #e5195e;
+  --lila: #f7f4ff;
+  --gris: #5b567a;
+  --oro: #f2c230;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: "DM Sans", system-ui, sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--indigo-oscuro);
+  background: var(--lila);
+}
+
+h1, h2, h3, .puesto { font-family: "Unbounded", "Arial Black", sans-serif; }
+
+/* Portada */
+.portada {
+  padding: 1.5rem 7vw 5rem;
+  color: var(--lila);
+  background: linear-gradient(135deg, var(--indigo) 0%, #4b1d8f 60%, var(--rosa) 130%);
+}
+.menu { display: flex; flex-wrap: wrap; gap: 1.5rem; margin-bottom: 4rem; }
+.menu a { color: var(--lila); text-decoration: none; font-weight: 500; border-bottom: 2px solid transparent; }
+.menu a:hover, .menu a:focus-visible { border-color: var(--rosa); outline: none; }
+
+.portada-contenido { display: flex; align-items: center; gap: 3rem; flex-wrap: wrap; max-width: 1100px; margin: 0 auto; }
+.portada h1 { font-size: clamp(2.2rem, 6vw, 4.5rem); font-weight: 800; line-height: 1.05; max-width: 14ch; }
+.subtitulo { margin-top: 1.2rem; max-width: 38ch; font-size: 1.2rem; opacity: .9; }
+
+.vinilo {
+  width: clamp(180px, 28vw, 300px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle, var(--lila) 0 3%, var(--rosa) 3% 20%, transparent 20%),
+    repeating-radial-gradient(circle, #14102e 0 5px, #231a52 5px 7px);
+  box-shadow: 0 20px 50px rgba(0,0,0,.4);
+  animation: girar 12s linear infinite;
+}
+@keyframes girar { to { transform: rotate(360deg); } }
+
+/* Secciones */
+.seccion { max-width: 1100px; margin: 0 auto; padding: 4.5rem 7vw; }
+.seccion h2 { font-size: 2rem; font-weight: 800; color: var(--indigo); margin-bottom: 2rem; }
+
+/* Avatares con iniciales */
+.avatar {
+  width: 84px; height: 84px; border-radius: 50%;
+  display: grid; place-items: center;
+  background: var(--c); color: #fff; position: relative; overflow: hidden;
+  font-family: "Unbounded", sans-serif; font-weight: 800; font-size: 1.4rem;
+}
+.avatar img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
+.avatar.chico { width: 56px; height: 56px; font-size: 1rem; flex-shrink: 0; }
+
+/* Podio */
+.podio { display: grid; grid-template-columns: 1fr 1.15fr 1fr; gap: 1.2rem; align-items: end; }
+.tarjeta {
+  position: relative; background: #fff; border-radius: 18px;
+  padding: 1.8rem 1.4rem 1.6rem; text-align: center;
+  border: 2px solid #e4def7;
+}
+.tarjeta .avatar { margin: 0 auto 1rem; }
+.tarjeta h3 { font-size: 1.3rem; }
+.pais { font-size: .9rem; color: var(--gris); margin-bottom: .6rem; }
+.tarjeta .puesto {
+  position: absolute; top: -1.2rem; left: 50%; transform: translateX(-50%);
+  width: 2.6rem; height: 2.6rem; display: grid; place-items: center;
+  border-radius: 50%; background: var(--indigo); color: var(--lila); font-size: 1.2rem; font-weight: 800;
+}
+.tarjeta.p1 { padding-top: 2.6rem; padding-bottom: 2.4rem; background: var(--indigo); color: var(--lila); border-color: var(--oro); }
+.tarjeta.p1 .puesto { background: var(--oro); color: var(--indigo-oscuro); }
+.tarjeta.p1 .pais { color: #cfc6f5; }
+.tarjeta.p1 .avatar { width: 104px; height: 104px; font-size: 1.7rem; }
+.podio .avatar { width: 110px; height: 110px; }
+.tarjeta.p1 .avatar { width: 140px; height: 140px; }
+
+/* Lista 4 al 10 */
+.lista { list-style: none; }
+.lista li {
+  display: flex; align-items: center; gap: 1rem;
+  padding: 1rem 0; border-bottom: 2px solid #e4def7;
+}
+.lista .puesto { width: 3.2rem; font-size: 1.6rem; font-weight: 800; color: var(--rosa); flex-shrink: 0; }
+.lista h3 { font-size: 1.1rem; }
+.lista p { font-size: .95rem; color: var(--gris); }
+
+/* Sobre el ranking */
+.oscura { max-width: none; background: var(--indigo-oscuro); color: var(--lila); }
+.oscura h2 { color: var(--lila); max-width: 986px; margin-left: auto; margin-right: auto; }
+.dos-columnas { max-width: 986px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2.5rem; }
+
+/* Pie */
+.pie { text-align: center; padding: 2rem 7vw; background: var(--indigo); color: #cfc6f5; font-size: .9rem; }
+
+/* Móvil */
+@media (max-width: 760px) {
+  .podio { grid-template-columns: 1fr; gap: 2rem; }
+  .tarjeta.p1 { order: -1; }
+  .portada-contenido { gap: 2rem; }
+  .seccion { padding: 3.5rem 6vw; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .vinilo { animation: none; }
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Top 10 de los artistas más escuchados de la historia en Spotify.">
+  <title>Top 10 Artistas Más Escuchados</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+  <header class="portada">
+    <nav class="menu" aria-label="Principal">
+      <a href="#podio">Podio</a>
+      <a href="#lista">Del 4 al 10</a>
+      <a href="#sobre">Sobre el ranking</a>
+    </nav>
+    <div class="portada-contenido">
+      <div class="vinilo" aria-hidden="true"></div>
+      <div>
+        <h1>Los 10 artistas más escuchados</h1>
+        <p class="subtitulo">El ranking de quienes acumulan más reproducciones en toda la historia de Spotify.</p>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="podio" class="seccion">
+      <h2>El podio</h2>
+      <div class="podio">
+
+        <article class="tarjeta p2">
+          <span class="puesto">2</span>
+          <div class="avatar" style="--c:#2b8cff">BB<img src="imagenes/badbunny.jpeg" alt="Foto de Bad Bunny" onerror="this.remove()"></div>
+          <h3>Bad Bunny</h3>
+          <p class="pais">Puerto Rico · Reggaetón y trap latino</p>
+          <p>Su álbum <em>Un Verano Sin Ti</em> es el más reproducido de la historia en Spotify.</p>
+        </article>
+
+        <article class="tarjeta p1">
+          <span class="puesto">1</span>
+          <div class="avatar" style="--c:#e5195e">TS<img src="imagenes/taylorswift.jpg" alt="Foto de Taylor Swift" onerror="this.remove()"></div>
+          <h3>Taylor Swift</h3>
+          <p class="pais">Estados Unidos · Pop</p>
+          <p>La artista más reproducida de todos los tiempos. Sus álbumes <em>Lover</em> y <em>Midnights</em> están entre los más escuchados.</p>
+        </article>
+
+        <article class="tarjeta p3">
+          <span class="puesto">3</span>
+          <div class="avatar" style="--c:#f2a900">DR<img src="imagenes/drake.jpeg" alt="Foto de Drake" onerror="this.remove()"></div>
+          <h3>Drake</h3>
+          <p class="pais">Canadá · Hip hop y R&amp;B</p>
+          <p>Éxitos como <em>One Dance</em> y álbumes como <em>Views</em> y <em>Scorpion</em> lo mantienen en el podio.</p>
+        </article>
+
+      </div>
+    </section>
+
+    <section id="lista" class="seccion">
+      <h2>Del 4 al 10</h2>
+      <ol class="lista" start="4">
+        <li><span class="puesto">4</span><div class="avatar chico" style="--c:#7b4dff">TW</div><div><h3>The Weeknd</h3><p>Canadá · R&amp;B y pop. Su canción <em>Blinding Lights</em> es la más reproducida de la historia.</p></div></li>
+        <li><span class="puesto">5</span><div class="avatar chico" style="--c:#ff6fa8">AG</div><div><h3>Ariana Grande</h3><p>Estados Unidos · Pop. Famosa por su voz y por éxitos como <em>thank u, next</em>.</p></div></li>
+        <li><span class="puesto">6</span><div class="avatar chico" style="--c:#16a085">ES</div><div><h3>Ed Sheeran</h3><p>Reino Unido · Pop y folk. <em>Shape of You</em> y <em>Perfect</em> están entre las canciones más escuchadas.</p></div></li>
+        <li><span class="puesto">7</span><div class="avatar chico" style="--c:#e57c00">JB</div><div><h3>Justin Bieber</h3><p>Canadá · Pop. Alcanzó fama mundial siendo adolescente y sigue vigente con <em>STAY</em>.</p></div></li>
+        <li><span class="puesto">8</span><div class="avatar chico" style="--c:#3fa34d">BE</div><div><h3>Billie Eilish</h3><p>Estados Unidos · Pop alternativo. <em>BIRDS OF A FEATHER</em> es de sus mayores éxitos.</p></div></li>
+        <li><span class="puesto">9</span><div class="avatar chico" style="--c:#555">EM</div><div><h3>Eminem</h3><p>Estados Unidos · Hip hop. Uno de los raperos más influyentes, autor de <em>Lose Yourself</em>.</p></div></li>
+        <li><span class="puesto">10</span><div class="avatar chico" style="--c:#b8313a">KW</div><div><h3>Kanye West</h3><p>Estados Unidos · Hip hop. Cerró el top 10 con un catálogo muy extenso y productor de grandes éxitos.</p></div></li>
+      </ol>
+    </section>
+
+    <section id="sobre" class="seccion oscura">
+      <h2>Sobre el ranking</h2>
+      <div class="dos-columnas">
+        <p>Esta lista mide las reproducciones totales de cada artista en Spotify a lo largo de toda su historia. Spotify la publicó en abril de 2026, cuando cumplió 20 años.</p>
+        <p>No es lo mismo que los "oyentes mensuales", que cambian cada mes y miden quién suena más en este momento. Por eso el primer puesto de esta lista puede ser distinto al de otros rankings.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <p>Fuente del ranking: lista de los artistas más reproducidos de la historia de Spotify, abril de 2026. Proyecto escolar de HTML5 y CSS hecho con ayuda de IA.</p>
+  </footer>
+
+</body>
+</html>
